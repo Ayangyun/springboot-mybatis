@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.yasung.mapper.PerformanceExitMapper">
+
+  <!-- 通用查询映射结果 -->
+  <resultMap id="BaseResultMap" type="cn.yasung.model.PerformanceExit">
+    <result column="id" property="id" />
+    <result column="marketing_name" property="marketingName" />
+    <result column="saleroom" property="saleroom" />
+    <result column="saleroom_date" property="saleroomDate" />
+    <result column="month" property="month" />
+    <result column="year" property="year" />
+  </resultMap>
+
+
+
+  <insert id="addPerformanceExit" parameterType="cn.yasung.model.PerformanceExit">
+    insert into sys_performance_exit(marketing_name,saleroom,saleroom_date,month,year)values(#{marketingName},#{saleroom},#{saleroomDate},#{month},#{year});
+  </insert>
+
+
+  <select id="getMonthPerformanceExit" resultMap="BaseResultMap"  >
+    select marketing_name,sum(saleroom) as saleroom
+    from sys_performance_exit
+    where
+    month=#{month}
+    AND
+    year=#{year}
+    AND
+    marketing_name=#{marketingName}
+
+  </select>
+
+
+    <select id="getDayPerformanceExit" resultMap="BaseResultMap"  >
+        select marketing_name,sum(saleroom) as saleroom
+        from sys_performance_exit
+        where
+        saleroom_date=#{saleroomDate}
+        AND
+        marketing_name=#{marketingName}
+
+    </select>
+
+
+
+</mapper>

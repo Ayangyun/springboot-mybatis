@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.yasung.mapper.IntegralExitMapper">
+
+  <!-- 通用查询映射结果 -->
+<resultMap id="BaseResultMap" type="cn.yasung.model.IntegralExit">
+    <result column="id" property="id" />
+    <result column="marketing_name" property="marketingName" />
+    <result column="month_integral" property="monthIntegral" />
+    <result column="year_integral" property="yearIntegral" />
+    <result column="ranking" property="ranking" />
+    <result column="month" property="month" />
+    <result column="year" property="year" />
+
+  </resultMap>
+
+<insert id="addIntegralExit" parameterType="cn.yasung.model.IntegralExit">
+    insert into sys_integral_exit(marketing_name,month_integral,year_integral,ranking,month,year)
+    values(#{marketingName},#{monthIntegral},#{yearIntegral},#{ranking},#{month},#{year});
+  </insert>
+
+
+    <select id="getIntegralExit" resultMap="BaseResultMap"  >
+      SELECT * FROM sys_integral_exit
+            WHERE
+            1=1
+            AND
+            month=#{month}
+            AND
+            year=#{year}
+            AND
+            marketing_name=#{marketingName}
+    </select>
+
+</mapper>

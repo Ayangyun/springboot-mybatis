@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.yasung.mapper.IntegralMapper">
+
+  <!-- 通用查询映射结果 -->
+<resultMap id="BaseResultMap" type="cn.yasung.model.Integral">
+    <result column="id" property="id" />
+    <result column="marketing_name" property="marketingName" />
+    <result column="month_integral" property="monthIntegral" />
+    <result column="year_integral" property="yearIntegral" />
+    <result column="day_champion" property="dayChampion" />
+    <result column="month_champion" property="monthChampion" />
+    <result column="year_champion" property="yearChampion" />
+    <result column="month_change_date" property="monthChangeDate" />
+    <result column="year_change_date" property="yearChangeDate" />
+    <result column="day_champion_date" property="dayChampionDate" />
+    <result column="month_champion_date" property="monthChampionDate" />
+    <result column="year_champion_date" property="yearChampionDate" />
+
+  </resultMap>
+
+<insert id="addIntegral" parameterType="cn.yasung.model.Integral">
+    insert into sys_integral(marketing_name,month_integral,year_integral,day_champion,month_champion,year_champion,month_change_date,year_change_date,day_champion_date,month_champion_date,year_champion_date)
+    values(#{marketingName},#{monthIntegral},#{yearIntegral},#{dayChampion},#{monthChampion},#{yearChampion},#{monthChangeDate},#{yearChangeDate},#{dayChampionDate},#{monthChampionDate},#{yearChampionDate});
+  </insert>
+
+     <select id="getListDayInteger" resultMap="BaseResultMap"  >
+      select id,marketing_name,day_champion,month_champion ,year_champion from sys_integral
+      WHERE
+      1=1
+      order by day_champion desc,day_champion_date asc
+    </select>
+    <select id="getListMonthInteger" resultMap="BaseResultMap"  >
+        select id,marketing_name,day_champion,month_champion ,year_champion from sys_integral
+        WHERE
+        1=1
+        order by month_champion desc,month_champion_date asc
+    </select>
+
+    <select id="getListYearInteger" resultMap="BaseResultMap"  >
+        select id,marketing_name,day_champion,month_champion ,year_champion from sys_integral
+        WHERE
+        1=1
+        order by year_champion desc,year_champion_date asc
+    </select>
+
+ <select id="getListIntegers" resultMap="BaseResultMap"  >
+    select id,marketing_name,month_integral,year_integral  from sys_integral
+    WHERE
+    1=1
+    order by month_integral desc,month_change_date asc
+  </select>
+
+<select id="getIntegral" resultMap="BaseResultMap" parameterType="java.lang.String"  >
+    select * from sys_integral
+    WHERE
+    1=1
+    AND
+    marketing_name=#{marketingName}
+  </select>
+
+<update id="updateIntegral" parameterType="cn.yasung.model.Integral">
+  update sys_integral
+  <trim prefix="SET" suffixOverrides=",">
+    <if test="marketingName!=null and '' != marketingName">
+      marketing_name=  #{marketingName},
+    </if>
+    <if test="monthIntegral!=null">
+      month_integral=  #{monthIntegral},
+    </if>
+    <if test="yearIntegral!=null">
+      year_integral=  #{yearIntegral},
+    </if>
+    <if test="dayChampion!=null and '' != dayChampion">
+      day_champion=  #{dayChampion},
+    </if>
+    <if test="monthChampion!=null and '' != monthChampion">
+      month_champion=  #{monthChampion},
+    </if>
+    <if test="yearChampion!=null and '' != yearChampion">
+     year_champion=  #{yearChampion},
+    </if>
+    <if test="monthChangeDate!=null and '' != monthChangeDate">
+      month_change_date=  #{monthChangeDate},
+    </if>
+      <if test="yearChangeDate!=null and '' != yearChangeDate">
+          year_change_date=  #{yearChangeDate},
+      </if>
+    <if test="dayChampionDate!=null and '' != dayChampionDate">
+      day_champion_date=  #{dayChampionDate},
+    </if>
+      <if test="monthChampionDate!=null and '' != monthChampionDate">
+          month_champion_date=  #{monthChampionDate},
+      </if>
+      <if test="yearChampionDate!=null and '' != yearChampionDate">
+          year_champion_date=  #{yearChampionDate},
+      </if>
+  </trim>
+  where
+  id=#{id}
+
+</update>
+
+<delete id="deleteIntegral" parameterType="java.lang.String">
+
+    delete from sys_integral where marketing_name =#{marketingName}
+
+  </delete>
+
+</mapper>

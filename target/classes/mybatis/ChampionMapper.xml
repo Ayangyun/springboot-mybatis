@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.yasung.mapper.ChampionMapper">
+
+  <!-- 通用查询映射结果 -->
+  <resultMap id="BaseResultMap" type="cn.yasung.model.Champion">
+    <result column="id" property="id" />
+    <result column="url" property="url" />
+    <result column="manifesto" property="manifesto" />
+    <result column="identification" property="identification" />
+
+
+
+  </resultMap>
+ 
+  <select id="findChampion" resultMap="BaseResultMap">
+    select * from sys_champion
+  </select>
+
+
+
+
+
+<update id="updateChampion" parameterType="cn.yasung.model.Champion">
+  update sys_champion
+  <trim prefix="SET" suffixOverrides=",">
+    <if test="url!=null and '' != url">
+      url=  #{url},
+    </if>
+    <if test="manifesto!=null and '' != manifesto">
+      manifesto=  #{manifesto},
+    </if>
+  </trim>
+  where
+  identification= #{identification}
+
+</update>
+
+
+ <insert id="addChampion" parameterType="cn.yasung.model.Champion">
+insert into sys_champion(url,identification,manifesto)values(#{url},#{identification},#{manifesto});
+ </insert>
+
+
+  
+
+</mapper>

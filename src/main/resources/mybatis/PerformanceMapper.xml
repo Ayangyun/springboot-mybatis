@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.yasung.mapper.PerformanceMapper">
+
+  <!-- 通用查询映射结果 -->
+  <resultMap id="BaseResultMap" type="cn.yasung.model.Performance">
+    <result column="id" property="id" />
+    <result column="marketing_name" property="marketingName" />
+    <result column="saleroom" property="saleroom" />
+    <result column="saleroom_date" property="saleroomDate" />
+    <result column="reciprocal" property="reciprocal" />
+    <result column="month" property="month" />
+    <result column="year" property="year" />
+  </resultMap>
+
+
+  <select id="getListPerformance" resultMap="BaseResultMap" parameterType="cn.yasung.vo.PerformanceVo" >
+    select * from sys_performance
+    WHERE
+    1=1
+    <if test="marketingName != null">
+      AND marketing_name LIKE CONCAT(CONCAT('%', #{marketingName}), '%')
+    </if>
+    <if test="saleroomDate != null">
+      AND saleroom_date=#{saleroomDate}
+    </if>
+
+  </select>
+  <insert id="addPerformance" parameterType="cn.yasung.model.Performance">
+    insert into sys_performance(marketing_name,saleroom,saleroom_date,reciprocal,month,year)values(#{marketingName},#{saleroom},#{saleroomDate},#{reciprocal},#{month},#{year});
+  </insert>
+
+
+  <select id="getPerformance" resultMap="BaseResultMap"  >
+    select * from sys_performance
+    WHERE
+    1=1
+    AND saleroom_date=#{saleroomDate}
+
+  </select>
+
+
+  <select id="getMonthPerformance" resultMap="BaseResultMap"  >
+    select marketing_name,sum(saleroom) as saleroom
+    from sys_performance
+    where
+    month=#{month}
+    AND
+    year=#{year}
+    GROUP BY marketing_name
+    order by saleroom desc
+
+  </select>
+
+
+
+</mapper>

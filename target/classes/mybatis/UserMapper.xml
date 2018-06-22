@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.yasung.mapper.UserMapper">
+
+  <!-- 通用查询映射结果 -->
+  <resultMap id="BaseResultMap" type="cn.yasung.model.User">
+    <result column="id" property="id" />
+    <result column="user_name" property="userName" />
+    <result column="pass_word" property="passWord" />
+    <result column="branch" property="branch" />
+    <result column="nick_name" property="nickName" />
+
+  </resultMap>
+ 
+  <select id="findUserInfo" resultMap="BaseResultMap">
+    select * from sys_user where id=#{id};
+  </select>
+
+
+  <select id="getListUser" resultMap="BaseResultMap" parameterType="cn.yasung.vo.UserVo" >
+    select * from sys_user
+    WHERE
+    1=1
+    <if test="userName != null">
+      AND user_name LIKE CONCAT(CONCAT('%', #{userName}), '%')
+    </if>
+    <if test="branch != null">
+      AND branch=#{branch}
+    </if>
+    <if test="nickName != null">
+      AND nick_name=#{nickName}
+    </if>
+
+
+  </select>
+
+<update id="updateUserInfo" parameterType="cn.yasung.model.User">
+  update sys_user
+  <trim prefix="SET" suffixOverrides=",">
+    <if test="userName!=null and '' != userName">
+      user_name=  #{userName},
+    </if>
+    <if test="passWord!=null and '' != passWord">
+      pass_word=  #{passWord},
+    </if>
+    <if test="branch!=null and '' != branch">
+      branch=  #{branch},
+    </if>
+    <if test="nickName!=null and '' != nickName">
+      nick_name=  #{nickName},
+    </if>
+  </trim>
+  where
+  id= #{id}
+
+</update>
+
+
+ <insert id="savUserInfo" parameterType="cn.yasung.model.User">
+insert into sys_user(user_name,pass_word,branch,nick_name)values(#{userName},#{passWord},#{branch},#{nickName});
+
+ </insert>
+
+  <select id="loginUserInfo"  resultMap="BaseResultMap">
+    select * from sys_user
+     where
+      1=1
+    <if test="userName != null">
+    AND user_name=#{userName}
+    </if>
+    <if test="passWord != null">
+     AND pass_word=#{passWord}
+    </if>
+
+  </select>
+
+  <delete id="deleteUserInfo" parameterType="java.lang.Integer">
+
+    delete from sys_user where id =#{id}
+
+  </delete>
+  
+
+</mapper>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.yasung.mapper.MarketingMapper">
+
+  <!-- 通用查询映射结果 -->
+  <resultMap id="BaseResultMap" type="cn.yasung.model.Marketing">
+    <result column="id" property="id" />
+    <result column="marketing_name" property="marketingName" />
+    <result column="station" property="station" />
+    <result column="branch" property="branch" />
+    <result column="hire_date" property="hireDate" />
+    <result column="head_url" property="headUrl" />
+    <result column="video_url" property="videoUrl" />
+
+  </resultMap>
+ 
+  <select id="findMarketing" resultMap="BaseResultMap">
+    select * from sys_marketing where id=#{id};
+  </select>
+
+  <select id="getPageMarketing" resultMap="BaseResultMap" parameterType="cn.yasung.vo.MarketingVo" >
+    select * from sys_marketing
+    WHERE
+    1=1
+    <if test="marketingName != null and ''!=marketingName">
+      AND marketing_name LIKE CONCAT(CONCAT('%', #{marketingName}), '%')
+    </if>
+    <if test="branch != null and ''!=branch">
+      AND branch=#{branch}
+    </if>
+    <if test="station != null and ''!=station">
+      AND station=#{station}
+    </if>
+
+  </select>
+
+  <select id="getListMarketing" resultMap="BaseResultMap"  >
+    select * from sys_marketing
+    WHERE
+    1=1
+  </select>
+
+
+  <select id="getMarketing" resultMap="BaseResultMap"  >
+    select * from sys_marketing
+    WHERE
+    1=1
+    AND
+    marketing_name=#{marketingName}
+  </select>
+
+
+<update id="updateMarketing" parameterType="cn.yasung.model.Marketing">
+  update sys_marketing
+  <trim prefix="SET" suffixOverrides=",">
+    <if test="marketingName!=null and '' != marketingName">
+      marketing_name=  #{marketingName},
+    </if>
+    <if test="station!=null and '' != station">
+      station=  #{station},
+    </if>
+    <if test="hireDate!=null and '' != hireDate">
+      hire_date=  #{hireDate},
+    </if>
+    <if test="headUrl!=null and '' != headUrl">
+      head_url=  #{headUrl},
+    </if>
+    <if test="videoUrl!=null and '' != videoUrl">
+      video_url=  #{videoUrl},
+    </if>
+  </trim>
+  where
+  id= #{id}
+
+</update>
+
+
+ <insert id="addMarketing" parameterType="cn.yasung.model.Marketing">
+insert into sys_marketing(marketing_name,station,branch,hire_date,head_url,video_url)values(#{marketingName},#{station},#{branch},#{hireDate},#{headUrl},#{videoUrl});
+ </insert>
+
+
+  <delete id="deleteUserInfo" parameterType="java.lang.Integer">
+
+    delete from sys_marketing where id =#{id}
+
+  </delete>
+  
+
+</mapper>
