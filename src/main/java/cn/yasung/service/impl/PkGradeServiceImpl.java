@@ -8,6 +8,7 @@ import cn.yasung.model.*;
 import cn.yasung.pojo.ReustPojo;
 import cn.yasung.service.PkGradeService;
 import cn.yasung.service.TargetService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -41,6 +42,8 @@ public class PkGradeServiceImpl implements PkGradeService {
     private PerformanceExitMapper performanceExitMapper;
     @Autowired
     private MarketingMapper marketingMapper;
+
+    private Logger logger = Logger.getLogger(PkGradeServiceImpl.class);
 
     @Override
     public List<ReustPojo> getListGrade() throws WeChatAPIBizException {
@@ -80,6 +83,8 @@ public class PkGradeServiceImpl implements PkGradeService {
                 }
                 reustPojo.setAtRanking(String.valueOf(i+1));
                 pojos.add(reustPojo);
+                System.out.println("1");
+                logger.info("成功获得pk成绩");
 
             }
 
