@@ -23,7 +23,7 @@ public class ReustPojo {
     private Integer lastMonthIntegral;//上月积分
     private String  lastRanking;//上月排名
     private String atRanking;//当月排名
-
+    private String orange;//当日销售最高的标识橙子
 
 
 
@@ -112,5 +112,13 @@ public class ReustPojo {
 
     public void setAtRanking(String atRanking) {
         this.atRanking = atRanking;
+    }
+
+    public String getOrange() {
+        return orange;
+    }
+
+    public void setOrange(String orange) {
+        this.orange = orange;
     }
 }

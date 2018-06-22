@@ -19,5 +19,7 @@ public interface PerformanceExitMapper {
 
     PerformanceExit getDayPerformanceExit(@Param("saleroomDate") Date saleroomDate,@Param("marketingName") String marketingName);
 
+    PerformanceExit getPerformanceExit(@Param("saleroomDate") Date saleroomDate);
+
 
     }

@@ -43,5 +43,19 @@
     </select>
 
 
+    <select id="getPerformanceExit" resultMap="BaseResultMap"  >
+     SELECT a.marketing_name,MAX(saleroom)AS saleroom,a.saleroom_date,a.month,a.year FROM(
+    select marketing_name,sum(saleroom) as saleroom,saleroom_date,month,year
+      from sys_performance_exit
+      where
+      saleroom_date=#{saleroomDate}
+      GROUP BY marketing_name
+      order by saleroom desc
+      )a
+     WHERE
+     1=1
+    </select>
+
+
 
 </mapper>

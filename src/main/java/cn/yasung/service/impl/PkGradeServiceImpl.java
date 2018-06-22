@@ -2,6 +2,7 @@ package cn.yasung.service.impl;
 
 
 import cn.yasung.constants.APIResponseCodeEnum;
+import cn.yasung.controller.PerformanceController;
 import cn.yasung.exception.WeChatAPIBizException;
 import cn.yasung.mapper.*;
 import cn.yasung.model.*;
@@ -58,9 +59,12 @@ public class PkGradeServiceImpl implements PkGradeService {
             Date date = formatter.parse(formatter.format(calendar.getTime()));
             List<ReustPojo> pojos = new ArrayList<>();
             List<Integral> integralList = integralMapper.getListIntegers();
-           // List<Marketing> marketingList = marketingMapper.getListMarketing();
+          PerformanceExit performanceExits = performanceExitMapper.getPerformanceExit(date);
             for (int i = 0; i < integralList.size(); i++) {
                 ReustPojo reustPojo = new ReustPojo();
+                if (performanceExits.getMarketingName().equals(integralList.get(i).getMarketingName())){
+                    reustPojo.setOrange("1");
+                }
                 reustPojo.setMarketingName(integralList.get(i).getMarketingName());
                 reustPojo.setHeadUrl(marketingMapper.getMarketing(integralList.get(i).getMarketingName()).getHeadUrl());
                 reustPojo.setAtSaleroom(performanceExitMapper.getDayPerformanceExit(date,integralList.get(i).getMarketingName()).getSaleroom());//当天业绩
@@ -74,20 +78,19 @@ public class PkGradeServiceImpl implements PkGradeService {
                 reustPojo.setAtMonthIntegral(integralList.get(i).getMonthIntegral());//获得当月积分
                 reustPojo.setYearIntegral(integralList.get(i).getYearIntegral());//获得年积分
                 IntegralExit integralExit =integralExitMapper.getIntegralExit(String.valueOf(month),year,integralList.get(i).getMarketingName());
-                if (integralExit==null){//获得上月积分,如果新来员工上月没有记录就为零
+                if (integralExit==null){//获得上月积分,如果新来员工上月没有记录就为零，排名为--
                     reustPojo.setLastMonthIntegral(0);
-                    reustPojo.setLastRanking("-");
+                    reustPojo.setLastRanking("--");
                 }else {
                     reustPojo.setLastMonthIntegral(integralExit.getMonthIntegral());
                     reustPojo.setLastRanking(integralExit.getRanking());
                 }
                 reustPojo.setAtRanking(String.valueOf(i+1));
                 pojos.add(reustPojo);
-                System.out.println("1");
                 logger.info("成功获得pk成绩");
 
             }
-
+            logger.info(pojos);
             return pojos;
         } catch (ParseException p) {
                return null;
