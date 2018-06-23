@@ -57,5 +57,29 @@
     </select>
 
 
+    <select id="getLatMonthPerformanceExit" resultMap="BaseResultMap"  >
+      select sum(saleroom) as saleroom
+    from sys_performance_exit
+    where
+    1=1
+    AND
+    month=#{month}
+    AND
+    year=#{year}
+    </select>
+
+
+
+    <select id="getLatYearPerformanceExit" resultMap="BaseResultMap"  >
+        select sum(saleroom) as saleroom
+        from sys_performance_exit
+        where
+        1=1
+        AND
+        year=#{year}
+    </select>
+
+
+
 
 </mapper>

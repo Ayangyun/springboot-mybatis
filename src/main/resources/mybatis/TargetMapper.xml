@@ -19,6 +19,24 @@
         select * from sys_target
     </select>
 
+    <select id="getMonthTarget" resultMap="BaseResultMap">
+        select * from sys_target
+        WHERE
+        1=1
+        AND
+        month=#{month}
+        AND
+        year=#{year}
+    </select>
+    <select id="getYearTarget" resultMap="BaseResultMap">
+        select * from sys_target
+        WHERE
+        1=1
+        AND
+        month is NULL
+        AND
+        year=#{year}
+    </select>
 
 
 </mapper>

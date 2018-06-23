@@ -5,6 +5,7 @@ import cn.yasung.constants.APIResponseCodeEnum;
 import cn.yasung.model.Marketing;
 import cn.yasung.model.Performance;
 import cn.yasung.pojo.ReustPojo;
+import cn.yasung.pojo.Schedule;
 import cn.yasung.service.MarketingService;
 import cn.yasung.service.PkGradeService;
 import cn.yasung.utils.UploadQNImg;
@@ -46,6 +47,16 @@ public class PkGradeController {
        List<ReustPojo> reustPojoList =pkGradeService.getListGrade();
 
         return new  APIResponse<>(reustPojoList);
+
+    }
+
+    @ApiOperation(value = "获取进度数值")
+    @RequestMapping(value = {"/getSchedule"},method = RequestMethod.GET)
+    public APIResponse getSchedule(){
+
+       Schedule schedule =pkGradeService.getSchedule();
+
+        return new  APIResponse<>(schedule);
 
     }
 

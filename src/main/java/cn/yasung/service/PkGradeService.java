@@ -2,6 +2,7 @@ package cn.yasung.service;
 
 import cn.yasung.model.Target;
 import cn.yasung.pojo.ReustPojo;
+import cn.yasung.pojo.Schedule;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,7 +16,7 @@ public interface PkGradeService {
 
 
     List<ReustPojo> getListGrade();
-
+    Schedule getSchedule();
 
 
 }
