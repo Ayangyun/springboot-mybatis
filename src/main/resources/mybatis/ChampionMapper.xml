@@ -13,8 +13,12 @@
 
   </resultMap>
  
-  <select id="findChampion" resultMap="BaseResultMap">
+  <select id="getChampion" resultMap="BaseResultMap" >
     select * from sys_champion
+    WHERE
+    1=1
+    AND
+    identification=#{identification}
   </select>
 
 

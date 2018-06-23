@@ -46,6 +46,8 @@ public class PkGradeServiceImpl implements PkGradeService {
     private MarketingMapper marketingMapper;
     @Autowired
     private TargetMapper targetMapper;
+    @Autowired
+    private ChampionMapper championMapper;
 
     private Logger logger = Logger.getLogger(PkGradeServiceImpl.class);
 
@@ -139,6 +141,17 @@ public class PkGradeServiceImpl implements PkGradeService {
         }
 
 
+    }
+
+    @Override
+    public Champion getChampion(String identification)throws WeChatAPIBizException {
+        try {
+           return championMapper.getChampion(identification);
+        }catch (WeChatAPIBizException w){
+            throw w;
+        }catch (Exception e){
+            throw new WeChatAPIBizException(APIResponseCodeEnum.SYSTEM_ERROR.getCode());
+        }
     }
 
     private int orderDate(Date date) {

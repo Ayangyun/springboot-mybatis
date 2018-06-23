@@ -1,5 +1,6 @@
 package cn.yasung.service;
 
+import cn.yasung.model.Champion;
 import cn.yasung.model.Target;
 import cn.yasung.pojo.ReustPojo;
 import cn.yasung.pojo.Schedule;
@@ -17,6 +18,7 @@ public interface PkGradeService {
 
     List<ReustPojo> getListGrade();
     Schedule getSchedule();
+    Champion getChampion(String identification);
 
 
 }

@@ -11,7 +11,7 @@ import java.util.List;
  * Created by yang on 2018/6/20.
  */
 public interface ChampionMapper {
-    Champion findChampion();
+    Champion getChampion(@Param("identification") String identification);
     void addChampion(Champion champion);
     void updateChampion(Champion champion);
 

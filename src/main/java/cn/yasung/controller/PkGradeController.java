@@ -2,6 +2,7 @@ package cn.yasung.controller;
 
 import cn.yasung.constants.APIResponse;
 import cn.yasung.constants.APIResponseCodeEnum;
+import cn.yasung.model.Champion;
 import cn.yasung.model.Marketing;
 import cn.yasung.model.Performance;
 import cn.yasung.pojo.ReustPojo;
@@ -53,10 +54,16 @@ public class PkGradeController {
     @ApiOperation(value = "获取进度数值")
     @RequestMapping(value = {"/getSchedule"},method = RequestMethod.GET)
     public APIResponse getSchedule(){
-
        Schedule schedule =pkGradeService.getSchedule();
-
         return new  APIResponse<>(schedule);
+
+    }
+
+    @ApiOperation(value = "获取冠军视频")
+    @RequestMapping(value = {"/getChampion"},method = RequestMethod.GET)
+    public APIResponse getChampion(@RequestParam("identification")String identification){
+        Champion champion = pkGradeService.getChampion(identification);
+        return new  APIResponse<>(champion);
 
     }
 

@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a5af93fd-38fe-4cd0-a128-73a4f0af5744" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yasung/pojo/Schedule.java" afterPath="$PROJECT_DIR$/src/main/java/cn/yasung/pojo/Schedule.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yasung/controller/PkGradeController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/yasung/controller/PkGradeController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yasung/mapper/ChampionMapper.java" afterPath="$PROJECT_DIR$/src/main/java/cn/yasung/mapper/ChampionMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yasung/service/PkGradeService.java" afterPath="$PROJECT_DIR$/src/main/java/cn/yasung/service/PkGradeService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/yasung/service/impl/PkGradeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cn/yasung/service/impl/PkGradeServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yasung/controller/PkGradeController.class" afterPath="$PROJECT_DIR$/target/classes/cn/yasung/controller/PkGradeController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yasung/mapper/TargetMapper.class" afterPath="$PROJECT_DIR$/target/classes/cn/yasung/mapper/TargetMapper.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/TargetMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mybatis/TargetMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/ChampionMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/ChampionMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/yasung/service/impl/PkGradeServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/yasung/service/impl/PkGradeServiceImpl.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,62 +25,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PkGradeServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PkGradeServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/service/impl/PkGradeServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="127" column="4" lean-forward="false" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="4" />
+            <state relative-caret-position="412">
+              <caret line="148" column="61" lean-forward="true" selection-start-line="148" selection-start-column="61" selection-end-line="148" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PkGradeController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ChampionMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/mapper/ChampionMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChampionMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/ChampionMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="20" selection-end-column="36" />
+              <folding>
+                <marker date="1529747236737" expanded="true" signature="569:595" ph="select * fro... sys_champion" />
+                <marker date="1529747236737" expanded="true" signature="569:658" ph="select * fro... sys_champion" />
+                <marker date="1529747236737" expanded="true" signature="748:1027" ph="update sys_marketing... " />
+                <marker date="1529747236737" expanded="true" signature="1109:1208" ph="insert into sys_champion... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PkGradeController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/controller/PkGradeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="56" column="12" lean-forward="false" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+            <state relative-caret-position="263">
+              <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Schedule.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/pojo/Schedule.java">
+      <file leaf-file-name="MarketingController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/controller/MarketingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="e#396#397#0" expanded="true" />
-                <element signature="e#432#433#0" expanded="true" />
-                <element signature="e#494#495#0" expanded="true" />
-                <element signature="e#544#545#0" expanded="true" />
-                <element signature="e#589#590#0" expanded="true" />
-                <element signature="e#626#627#0" expanded="true" />
-                <element signature="e#690#691#0" expanded="true" />
-                <element signature="e#742#743#0" expanded="true" />
-                <element signature="e#785#786#0" expanded="true" />
-                <element signature="e#819#820#0" expanded="true" />
-                <element signature="e#877#878#0" expanded="true" />
-                <element signature="e#923#924#0" expanded="true" />
-                <element signature="e#967#968#0" expanded="true" />
-                <element signature="e#1003#1004#0" expanded="true" />
-                <element signature="e#1065#1066#0" expanded="true" />
-                <element signature="e#1115#1116#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="324">
+              <caret line="103" column="44" lean-forward="true" selection-start-line="103" selection-start-column="44" selection-end-line="103" selection-end-column="44" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Target.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/model/Target.java">
+      <file leaf-file-name="Champion.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/model/Champion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="47" column="22" lean-forward="false" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
-              <folding>
-                <element signature="e#778#779#0" expanded="true" />
-                <element signature="e#807#808#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="317">
+              <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,16 +95,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="486">
               <caret line="148" column="84" lean-forward="true" selection-start-line="148" selection-start-column="57" selection-end-line="148" selection-end-column="84" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TargetMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/mapper/TargetMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -123,7 +119,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/service/PkGradeService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="277">
-              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -203,8 +199,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/service/impl/MarketingServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/config/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/controller/MarketingController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/ChampionMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/yasung/mapper/ChampionMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/service/impl/ChampionServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/service/impl/PerformanceServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/controller/ChampionController.java" />
@@ -213,15 +207,17 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/mapper/IntegralExitMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/pojo/ReustPojo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/IntegralExitMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/yasung/service/PkGradeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/mapper/TargetMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/mapper/PerformanceExitMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/PerformanceExitMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/controller/year.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/yasung/controller/PkGradeController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/TargetMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/pojo/Schedule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yasung/service/PkGradeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yasung/mapper/ChampionMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/ChampionMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/service/impl/PkGradeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/yasung/controller/PkGradeController.java" />
       </list>
     </option>
   </component>
@@ -630,7 +626,7 @@
       <workItem from="1529461227777" duration="20004000" />
       <workItem from="1529540123615" duration="27569000" />
       <workItem from="1529628059316" duration="23238000" />
-      <workItem from="1529712240122" duration="17569000" />
+      <workItem from="1529712240122" duration="20340000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1529646840028</created>
@@ -653,14 +649,22 @@
       <option name="project" value="LOCAL" />
       <updated>1529740051586</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="提交代码">
+      <created>1529744811572</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1529744811572</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198484000" />
+    <option name="totallyTimeSpent" value="201255000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37261146" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
@@ -735,7 +739,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="126" />
+      <option name="time" value="127" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -744,14 +748,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/utils/MD5Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/model/IntegralExit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -870,21 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/model/Champion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/mapper/ChampionMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/controller/ChampionController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
@@ -928,14 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1344">
           <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/controller/MarketingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -997,18 +970,6 @@
         <state relative-caret-position="180">
           <caret line="48" column="53" lean-forward="false" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/ChampionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-          <folding>
-            <marker date="1529551942455" expanded="true" signature="569:595" ph="select * fro... sys_champion" />
-            <marker date="1529551942455" expanded="true" signature="685:964" ph="update sys_marketing... " />
-            <marker date="1529551942455" expanded="true" signature="1046:1145" ph="insert into sys_champion... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1115,14 +1076,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/service/PkGradeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/mapper/TargetMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
@@ -1177,14 +1130,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/controller/PkGradeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="56" column="12" lean-forward="false" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/pojo/Schedule.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -1210,10 +1155,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/controller/IntegralController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/controller/MarketingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="103" column="44" lean-forward="true" selection-start-line="103" selection-start-column="44" selection-end-line="103" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/service/PkGradeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/model/Champion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/ChampionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="3" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <marker date="1529747236737" expanded="true" signature="569:595" ph="select * fro... sys_champion" />
+            <marker date="1529747236737" expanded="true" signature="569:658" ph="select * fro... sys_champion" />
+            <marker date="1529747236737" expanded="true" signature="748:1027" ph="update sys_marketing... " />
+            <marker date="1529747236737" expanded="true" signature="1109:1208" ph="insert into sys_champion... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/service/impl/PkGradeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="127" column="4" lean-forward="false" selection-start-line="127" selection-start-column="4" selection-end-line="127" selection-end-column="4" />
+        <state relative-caret-position="412">
+          <caret line="148" column="61" lean-forward="true" selection-start-line="148" selection-start-column="61" selection-end-line="148" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/mapper/ChampionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/controller/PkGradeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding />
         </state>
       </provider>
