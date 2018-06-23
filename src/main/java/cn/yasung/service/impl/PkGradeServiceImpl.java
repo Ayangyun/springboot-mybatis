@@ -127,9 +127,9 @@ public class PkGradeServiceImpl implements PkGradeService {
                 days=365;
             }
             schedule.setAtMonthTarget(performanceExit.getSaleroom().divide(target.getTarget(),4, BigDecimal.ROUND_HALF_UP));
-            schedule.setLastMonthTarget(performanceExit1.getSaleroom().divide(target1.getTarget(),4, BigDecimal.ROUND_HALF_UP));
+            schedule.setAtYarTarget(performanceExit1.getSaleroom().divide(target1.getTarget(),4, BigDecimal.ROUND_HALF_UP));
             schedule.setAtMonthPredict(new BigDecimal(lastMonth).divide(new BigDecimal(maxDay),4, BigDecimal.ROUND_HALF_UP));
-            schedule.setLastMonthPredict(new BigDecimal(lastYear).divide(new BigDecimal(days),4, BigDecimal.ROUND_HALF_UP));
+            schedule.setAtYearPredict(new BigDecimal(lastYear).divide(new BigDecimal(days),4, BigDecimal.ROUND_HALF_UP));
 
             return schedule;
         } catch (WeChatAPIBizException e) {

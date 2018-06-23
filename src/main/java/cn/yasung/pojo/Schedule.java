@@ -11,9 +11,9 @@ public class Schedule {
 
 
     private BigDecimal atMonthTarget;//当月完成额百分比
-    private BigDecimal atMonthPredict;//当月目标额度百分比
-    private BigDecimal lastMonthTarget;//当年完成额度百分比
-    private BigDecimal lastMonthPredict;//当年目标额度百分比
+    private BigDecimal atMonthPredict;//当月预计完成额度百分比
+    private BigDecimal atYarTarget;//当年完成额度百分比
+    private BigDecimal atYearPredict;//当年预计完成额度百分比
 
 
 
@@ -37,19 +37,20 @@ public class Schedule {
         this.atMonthPredict = atMonthPredict;
     }
 
-    public BigDecimal getLastMonthTarget() {
-        return lastMonthTarget;
+
+    public BigDecimal getAtYarTarget() {
+        return atYarTarget;
     }
 
-    public void setLastMonthTarget(BigDecimal lastMonthTarget) {
-        this.lastMonthTarget = lastMonthTarget;
+    public void setAtYarTarget(BigDecimal atYarTarget) {
+        this.atYarTarget = atYarTarget;
     }
 
-    public BigDecimal getLastMonthPredict() {
-        return lastMonthPredict;
+    public BigDecimal getAtYearPredict() {
+        return atYearPredict;
     }
 
-    public void setLastMonthPredict(BigDecimal lastMonthPredict) {
-        this.lastMonthPredict = lastMonthPredict;
+    public void setAtYearPredict(BigDecimal atYearPredict) {
+        this.atYearPredict = atYearPredict;
     }
 }
