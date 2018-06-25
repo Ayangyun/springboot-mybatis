@@ -30,7 +30,8 @@ import java.util.List;
  * Created by yang on 2018/5/31.
  */
 @RestController
-@Api(value = "pk榜单" ,description = "pk榜单")
+
+@Api(value = "/pk", description = "PK榜单")
 @RequestMapping(value = "/pk" )
 public class PkGradeController {
 

@@ -2,16 +2,22 @@ package cn.yasung.model;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.wordnik.swagger.annotations.ApiModelProperty;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by zl on 2015/8/27.
  */
 
-public class Marketing {
+public class Marketing implements Serializable {
+    private static final long serialVersionUID = -8164045367092534284L;
     private Integer id;
+    @ApiModelProperty(value = "姓名(传:APP)")
     private String marketingName;
     private String station;
     private String branch;

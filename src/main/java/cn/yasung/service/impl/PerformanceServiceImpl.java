@@ -174,7 +174,6 @@ public class PerformanceServiceImpl implements PerformanceService {
                     }
                     performanceMapper.addPerformance(performance2);//数值录入数据库
                 }
-
                 Calendar calendar = Calendar.getInstance();//时间转换
                 calendar.setTime(newDate);
                 calendar.add(Calendar.DAY_OF_MONTH, -1);
