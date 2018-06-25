@@ -26,9 +26,9 @@ public class QuartzService {
     @Autowired
     private PerformanceMapper performanceMapper;
 
-    //    每月1号凌晨12点启动
+    //    每月1号下午六点执行
    // @Scheduled(cron="0/5 * *  * * ? ")   //每5秒执行一次
-    @Scheduled(cron = "0 0 0 1 * ?")
+    @Scheduled(cron = "0 0 17 1 * ?")
     public void timerToNow() throws ParseException {
 
         Integral integral;

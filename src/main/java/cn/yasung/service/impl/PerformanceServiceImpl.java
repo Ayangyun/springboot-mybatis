@@ -30,6 +30,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 import static cn.yasung.constants.Constant.SYSTEM_PAGENUM;
+import static cn.yasung.constants.Constant.SYS_LENGTH;
 
 /**
  * Project Name:
@@ -104,7 +105,7 @@ public class PerformanceServiceImpl implements PerformanceService {
                     } else if (7 <= monthCha && monthCha < 10) {
                         performance.setSaleroom(performance.getSaleroom().multiply(new BigDecimal(1.4)).setScale(2, BigDecimal.ROUND_HALF_UP));
                     } else if (10 <= monthCha && monthCha < 13) {
-                        performance.setSaleroom(performance.getSaleroom().multiply(new BigDecimal(1.3)).setScale(2, BigDecimal.ROUND_HALF_UP));
+                         performance.setSaleroom(performance.getSaleroom().multiply(new BigDecimal(1.3)).setScale(2, BigDecimal.ROUND_HALF_UP));
                     } else if (13 <= monthCha && monthCha < 16) {
                         performance.setSaleroom(performance.getSaleroom().multiply(new BigDecimal(1.2)).setScale(2, BigDecimal.ROUND_HALF_UP));
                     } else if (16 <= monthCha && monthCha < 19) {
@@ -182,12 +183,16 @@ public class PerformanceServiceImpl implements PerformanceService {
                     currentTime_2 = formatter.parse(dateString);
                 List<Performance> performances;
                 performances = performanceMapper.getPerformance(currentTime_2);
-                if (performances.size()==0){//如果星期天则在往前找一天；
-                    calendar.setTime(currentTime_2);
-                    calendar.add(Calendar.DAY_OF_MONTH, -1);
-                    Date  currentTime_3;
-                     currentTime_3 = formatter.parse(formatter.format(calendar.getTime()));//获得时间
-                    performances =performanceMapper.getPerformance(currentTime_3);
+                if (performances.size()==0){//如果星期天则在往前找一天；放长假就再往前找
+                    for (int i=0;i<=SYS_LENGTH;i++) {
+                        calendar.setTime(currentTime_2);
+                        calendar.add(Calendar.DAY_OF_MONTH, -1);
+                        Date currentTime_3;
+                        currentTime_3 = formatter.parse(formatter.format(calendar.getTime()));//获得时间
+                        performances = performanceMapper.getPerformance(currentTime_3);
+                        if(performances!=null)break;
+                    }
+
                 }
                 logger.info(performances);
                 for (Performance performance3 : performances){

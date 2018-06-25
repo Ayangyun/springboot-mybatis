@@ -8,6 +8,7 @@ public class Constant {
 
 
     public final static   Integer SYSTEM_PAGENUM=10;
+    public final static   int  SYS_LENGTH=20;
 
 
 

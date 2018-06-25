@@ -22,6 +22,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import static cn.yasung.constants.Constant.SYS_LENGTH;
+
 /**
  * Project Name:
  * 功能描述：
@@ -61,10 +63,21 @@ public class PkGradeServiceImpl implements PkGradeService {
             int month = calendar.get(Calendar.MONTH);//0代表第一个月
             String year = String.valueOf(calendar.get(Calendar.YEAR));
             calendar.add(Calendar.DAY_OF_MONTH, -1);
-            Date date = formatter.parse(formatter.format(calendar.getTime()));
+            Date date;
+            date= formatter.parse(formatter.format(calendar.getTime()));
             List<ReustPojo> pojos = new ArrayList<>();
             List<Integral> integralList = integralMapper.getListIntegers();
-            PerformanceExit performanceExits = performanceExitMapper.getPerformanceExit(date);//获得当日销售额最高的那个人
+            PerformanceExit performanceExits;
+            performanceExits = performanceExitMapper.getPerformanceExit(date);//获得当日销售额最高的那个人
+            if (performanceExits==null){//没有在往前找一天
+                for (int i=0;i<=SYS_LENGTH;i++){
+                    calendar.setTime(date);
+                    calendar.add(Calendar.DAY_OF_MONTH, -1);
+                    date=formatter.parse(formatter.format(calendar.getTime()));
+                    performanceExits = performanceExitMapper.getPerformanceExit(date);
+                    if (performanceExits!=null) break;
+                }
+            }
             for (int i = 0; i < integralList.size(); i++) {
                 ReustPojo reustPojo = new ReustPojo();
                 if (performanceExits.getMarketingName().equals(integralList.get(i).getMarketingName())) {//给销售额最高的一个标识
