@@ -10,6 +10,7 @@ import cn.yasung.pojo.Schedule;
 import cn.yasung.service.MarketingService;
 import cn.yasung.service.PkGradeService;
 import cn.yasung.utils.UploadQNImg;
+import cn.yasung.vo.ChampionVo;
 import cn.yasung.vo.MarketingVo;
 import cn.yasung.vo.PerformanceVo;
 import com.github.pagehelper.PageInfo;
@@ -62,9 +63,9 @@ public class PkGradeController {
 
     @ApiOperation(value = "获取冠军视频")
     @RequestMapping(value = {"/getChampion"},method = RequestMethod.GET)
-    public APIResponse getChampion(@RequestParam("identification")String identification){
-        Champion champion = pkGradeService.getChampion(identification);
-        return new  APIResponse<>(champion);
+    public APIResponse <ChampionVo>getChampion(@RequestParam("identification")String identification){
+        ChampionVo championVo = pkGradeService.getChampion(identification);
+        return new  APIResponse<>(championVo);
 
     }
 

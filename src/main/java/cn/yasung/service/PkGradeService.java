@@ -4,6 +4,7 @@ import cn.yasung.model.Champion;
 import cn.yasung.model.Target;
 import cn.yasung.pojo.ReustPojo;
 import cn.yasung.pojo.Schedule;
+import cn.yasung.vo.ChampionVo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,7 +19,7 @@ public interface PkGradeService {
 
     List<ReustPojo> getListGrade();
     Schedule getSchedule();
-    Champion getChampion(String identification);
+    ChampionVo getChampion(String identification);
 
 
 }

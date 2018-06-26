@@ -48,9 +48,10 @@ public class ChampionController {
         String fileName = videoFile.getOriginalFilename();
         logger.info("上传的文件名为：" + fileName);
         // 获取文件的后缀名
+        String suffixName = fileName.substring(fileName.lastIndexOf("."));
         UploadQNImg uploadQNImg = new UploadQNImg();
         String filePath =uploadQNImg.upload(inputStream,fileName);
-        logger.info("上传成功后的文件路径未：" + filePath );
+        logger.info("上传成功后的文件路径为：" + filePath );
         return new APIResponse<>(filePath);
 
     }

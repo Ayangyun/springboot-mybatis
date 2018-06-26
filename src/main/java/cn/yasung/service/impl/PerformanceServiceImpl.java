@@ -191,7 +191,6 @@ public class PerformanceServiceImpl implements PerformanceService {
                         performances = performanceMapper.getPerformance(currentTime_3);
                         if(performances!=null)break;
                     }
-
                 }
                 logger.info(performances);
                 for (Performance performance3 : performances){

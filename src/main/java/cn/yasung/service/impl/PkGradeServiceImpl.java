@@ -10,6 +10,7 @@ import cn.yasung.pojo.ReustPojo;
 import cn.yasung.pojo.Schedule;
 import cn.yasung.service.PkGradeService;
 import cn.yasung.service.TargetService;
+import cn.yasung.vo.ChampionVo;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -61,7 +62,7 @@ public class PkGradeServiceImpl implements PkGradeService {
             Calendar calendar = Calendar.getInstance();
             calendar.setTime(new Date());
             int month = calendar.get(Calendar.MONTH);//0代表第一个月
-            String year = String.valueOf(calendar.get(Calendar.YEAR));
+            String year = String.valueOf(calendar.get(Calendar.YEAR));//获取年份
             calendar.add(Calendar.DAY_OF_MONTH, -1);
             Date date;
             date= formatter.parse(formatter.format(calendar.getTime()));
@@ -157,9 +158,22 @@ public class PkGradeServiceImpl implements PkGradeService {
     }
 
     @Override
-    public Champion getChampion(String identification)throws WeChatAPIBizException {
+    public ChampionVo getChampion(String identification)throws WeChatAPIBizException {
         try {
-           return championMapper.getChampion(identification);
+            ChampionVo championVo = new ChampionVo();
+           Champion champion= championMapper.getChampion(identification);
+           String championUrl=champion.getUrl().substring(champion.getUrl().lastIndexOf(".")+1,champion.getUrl().length());
+           if (championUrl.equals("jpg") || championUrl.equals("png")){
+               championVo.setUrlIdentification("1");
+           }else  if (championUrl.equals("mp4") || championUrl.equals("avi") || championUrl.equals("rm") || championUrl.equals("rmvb")){
+               championVo.setUrlIdentification("2");
+           }
+           championVo.setUrl(champion.getUrl());
+           championVo.setIdentification(champion.getIdentification());
+           championVo.setManifesto(champion.getManifesto());
+
+            return championVo;
+
         }catch (WeChatAPIBizException w){
             throw w;
         }catch (Exception e){
