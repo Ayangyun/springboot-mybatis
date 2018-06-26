@@ -201,7 +201,7 @@ public class PerformanceServiceImpl implements PerformanceService {
                             integral.setMonthChangeDate(new Date());
                             integralMapper.updateIntegral(integral);
                         }else{
-                            System.out.println("没有连续两天倒数第一");
+                           logger.info("没有连续两天倒数第一");
                         }
                     }
                 }

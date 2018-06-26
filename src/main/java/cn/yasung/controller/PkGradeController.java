@@ -1,29 +1,16 @@
 package cn.yasung.controller;
 
 import cn.yasung.constants.APIResponse;
-import cn.yasung.constants.APIResponseCodeEnum;
-import cn.yasung.model.Champion;
-import cn.yasung.model.Marketing;
-import cn.yasung.model.Performance;
-import cn.yasung.pojo.ReustPojo;
+import cn.yasung.pojo.RequestPojo;
 import cn.yasung.pojo.Schedule;
-import cn.yasung.service.MarketingService;
 import cn.yasung.service.PkGradeService;
-import cn.yasung.utils.UploadQNImg;
 import cn.yasung.vo.ChampionVo;
-import cn.yasung.vo.MarketingVo;
-import cn.yasung.vo.PerformanceVo;
-import com.github.pagehelper.PageInfo;
 import com.wordnik.swagger.annotations.Api;
 import com.wordnik.swagger.annotations.ApiOperation;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.List;
 
 
@@ -47,15 +34,15 @@ public class PkGradeController {
     @RequestMapping(value = {"/getListGrade"},method = RequestMethod.GET)
     public APIResponse getListGrade(){
 
-       List<ReustPojo> reustPojoList =pkGradeService.getListGrade();
+       List<RequestPojo> requestPojoList =pkGradeService.getListGrade();
 
-        return new  APIResponse<>(reustPojoList);
+        return new  APIResponse<>(requestPojoList);
 
     }
 
     @ApiOperation(value = "获取进度数值")
     @RequestMapping(value = {"/getSchedule"},method = RequestMethod.GET)
-    public APIResponse getSchedule(){
+    public APIResponse<Schedule> getSchedule(){
        Schedule schedule =pkGradeService.getSchedule();
         return new  APIResponse<>(schedule);
 
@@ -66,7 +53,6 @@ public class PkGradeController {
     public APIResponse <ChampionVo>getChampion(@RequestParam("identification")String identification){
         ChampionVo championVo = pkGradeService.getChampion(identification);
         return new  APIResponse<>(championVo);
-
     }
 
 

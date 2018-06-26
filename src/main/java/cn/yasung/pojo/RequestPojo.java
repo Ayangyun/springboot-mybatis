@@ -12,7 +12,7 @@ import java.util.Date;
  * Created by zl on 2015/8/27.
  */
 
-public class ReustPojo {
+public class RequestPojo {
     @ApiModelProperty(value = "销售代表姓名")
     private String marketingName;//销售代表姓名
     @ApiModelProperty(value = "头像路径")
@@ -38,7 +38,7 @@ public class ReustPojo {
 
 
 
-    public ReustPojo() {
+    public RequestPojo() {
     }
 
 

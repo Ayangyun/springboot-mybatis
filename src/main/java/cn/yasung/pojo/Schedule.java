@@ -1,6 +1,8 @@
 package cn.yasung.pojo;
 
 
+import com.wordnik.swagger.annotations.ApiModelProperty;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.math.BigDecimal;
@@ -11,11 +13,14 @@ import java.math.BigDecimal;
 
 public class Schedule {
 
-    @NotNull(message = "当月完成额百分比")
-    @Size(min = 1, message = "当月完成额百分比 ")
+
+    @ApiModelProperty(value = "当月完成额百分比")
     private BigDecimal atMonthTarget;//当月完成额百分比
+    @ApiModelProperty(value = "当月预计完成额度百分比")
     private BigDecimal atMonthPredict;//当月预计完成额度百分比
+    @ApiModelProperty(value = "当年完成额度百分比")
     private BigDecimal atYarTarget;//当年完成额度百分比
+    @ApiModelProperty(value = "当年预计完成额度百分比")
     private BigDecimal atYearPredict;//当年预计完成额度百分比
 
 

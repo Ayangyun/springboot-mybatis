@@ -12,6 +12,8 @@ import com.qiniu.util.Auth;
 
 
 import java.io.FileInputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class UploadQNImg {
 
@@ -45,6 +47,40 @@ public class UploadQNImg {
             e.printStackTrace();
         }
         return "";
+    }
+
+    private int orderDate(Date date) {
+        int dateSum = 0;
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        String dateStr = format.format(date);
+        System.out.println(dateStr);
+        int year = Integer.valueOf(dateStr.substring(0, 4));
+        int month = Integer.valueOf(dateStr.substring(5, 7));
+        int day = Integer.valueOf(dateStr.substring(8, 10));
+        for (int i = 1; i < month; i++) {
+            switch (i) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    dateSum += 31;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    dateSum += 30;
+                    break;
+                case 2:
+                    if (((year % 4 == 0) & (year % 100 != 0)) | (year % 400 == 0))
+                        dateSum += 29;
+                    else dateSum += 28;
+            }
+        }
+        return dateSum = dateSum + day;
     }
 
 }
