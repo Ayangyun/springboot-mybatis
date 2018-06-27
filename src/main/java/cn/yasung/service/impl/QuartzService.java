@@ -39,13 +39,13 @@ public class QuartzService {
         calendar.setTime(date);
         int month = calendar.get(Calendar.MONTH);//0代表第一个月
         String year = String.valueOf(calendar.get(Calendar.YEAR));
-        List<Performance> performanceList = performanceMapper.getMonthPerformance(String.valueOf(month+1),year);
+        List<Performance> performanceList = performanceMapper.getMonthPerformanceList(String.valueOf(month+1),year);
         String marketingName =performanceList.get(0).getMarketingName();//找到当月销售额最高的给他的月积分加2分
         integral = integralMapper.getIntegral(marketingName);
         integral.setMonthIntegral(integral.getMonthIntegral()+2);
         integral.setMonthChangeDate(new Date());
         integralMapper.updateIntegral(integral);
-        //根据月积分最高的 年积分加一 最小的 减一分 ！！；
+        //根据月积分最高的 年积分加一 最小的 减一分 ！！
         List<Integral> integralList = integralMapper.getListIntegers();
         Integral integral1 =integralList.get(0);
         integral1.setYearIntegral(integral1.getYearIntegral()+1);//月积分最高加一分

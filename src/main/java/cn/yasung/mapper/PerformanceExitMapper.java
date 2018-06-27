@@ -16,12 +16,12 @@ import java.util.List;
 public interface PerformanceExitMapper {
 
     void addPerformanceExit(PerformanceExit performanceExit);
-
+/*
     PerformanceExit getMonthPerformanceExit(@Param("month") String month, @Param("year") String year,@Param("marketingName") String marketingName);
 
     PerformanceExit getDayPerformanceExit(@Param("saleroomDate") Date saleroomDate,@Param("marketingName") String marketingName);
 
-    PerformanceExit getPerformanceExit(@Param("saleroomDate") Date saleroomDate);
+    PerformanceExit getPerformanceExit(@Param("saleroomDate") Date saleroomDate);*/
 
     PerformanceExit getLatMonthPerformanceExit(@Param("month") String month, @Param("year") String year);
     PerformanceExit getLatYearPerformanceExit( @Param("year") String year);

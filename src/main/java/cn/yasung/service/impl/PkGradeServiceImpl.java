@@ -71,31 +71,31 @@ public class PkGradeServiceImpl implements PkGradeService {
             date= formatter.parse(formatter.format(calendar.getTime()));
             List<RequestPojo> requestPojoList = new ArrayList<>();
             List<Integral> integralList = integralMapper.getListIntegers();
-            PerformanceExit performanceExits;
-            performanceExits = performanceExitMapper.getPerformanceExit(date);//获得当日销售额最高的那个人
-            if (performanceExits==null){//没有在往前找一天
+            Performance performance;
+            performance = performanceMapper.getPerformance(date);//获得当日销售额最高的那个人
+            if (performance==null){//没有在往前找一天
                 for (int i=0;i<=SYS_LENGTH;i++){
                     calendar.setTime(date);
                     calendar.add(Calendar.DAY_OF_MONTH, -1);
                     date=formatter.parse(formatter.format(calendar.getTime()));
-                    performanceExits = performanceExitMapper.getPerformanceExit(date);
-                    if (performanceExits!=null) break;
+                    performance= performanceMapper.getPerformance(date);
+                    if (performance!=null) break;
                 }
             }
             for (int i = 0; i < integralList.size(); i++) {
                 RequestPojo requestPojo = new RequestPojo();
-                if (performanceExits.getMarketingName().equals(integralList.get(i).getMarketingName())) {//给销售额最高的一个标识
+                if (performance.getMarketingName().equals(integralList.get(i).getMarketingName())) {//给销售额最高的一个标识
                     requestPojo.setOrange("1");
                 }
                 requestPojo.setMarketingName(integralList.get(i).getMarketingName());
                 requestPojo.setHeadUrl(marketingMapper.getMarketing(integralList.get(i).getMarketingName()).getHeadUrl());
-                requestPojo.setAtSaleroom(performanceExitMapper.getDayPerformanceExit(date, integralList.get(i).getMarketingName()).getSaleroom());//当天业绩
-                requestPojo.setAtMonthSaleroom(performanceExitMapper.getMonthPerformanceExit(String.valueOf(month + 1), year, integralList.get(i).getMarketingName()).getSaleroom());//当月成绩
-                PerformanceExit performanceExit = performanceExitMapper.getMonthPerformanceExit(String.valueOf(month), year, integralList.get(i).getMarketingName());//上月成绩
-                if (performanceExit == null) {
+                requestPojo.setAtSaleroom(performanceMapper.getDayPerformance(date, integralList.get(i).getMarketingName()).getSaleroom());//当天业绩
+                requestPojo.setAtMonthSaleroom(performanceMapper.getMonthPerformance(String.valueOf(month + 1), year, integralList.get(i).getMarketingName()).getSaleroom());//当月成绩
+                Performance performance1 = performanceMapper.getMonthPerformance(String.valueOf(month), year, integralList.get(i).getMarketingName());//上月成绩
+                if (performance == null) {
                     requestPojo.setLastMonthSaleroom(new BigDecimal(0));
                 } else {
-                    requestPojo.setLastMonthSaleroom(performanceExit.getSaleroom());
+                    requestPojo.setLastMonthSaleroom(performance1.getSaleroom());
                 }
                 requestPojo.setAtMonthIntegral(integralList.get(i).getMonthIntegral());//获得当月积分
                 requestPojo.setYearIntegral(integralList.get(i).getYearIntegral());//获得年积分

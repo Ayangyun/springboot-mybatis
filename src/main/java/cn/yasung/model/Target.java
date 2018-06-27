@@ -1,6 +1,7 @@
 package cn.yasung.model;
 
 
+import com.wordnik.swagger.annotations.ApiModelProperty;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.math.BigDecimal;
@@ -12,8 +13,11 @@ import java.util.Date;
 
 public class Target {
     private Integer id;
+    @ApiModelProperty(value = "目标多少")
     private BigDecimal target;//目标
+    @ApiModelProperty(value = "是哪个月的")
     private String month;//那个月
+    @ApiModelProperty(value = "年份多少")
     private String year;//那年
 
 

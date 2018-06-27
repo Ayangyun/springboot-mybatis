@@ -39,6 +39,7 @@ public class LoginController {
         User user = userService.loginUserInfo(userName, MD5Util.encrypt(passWord));
             logger.info(user);
         if(user!=null){
+            logger.info("登录成功");
             return new APIResponse<>(APIResponseCodeEnum.SYSTEM_LOGIN_TS.getMsg());
         }else{
         logger.error(APIResponseCodeEnum.SYSTEM_LOGIN.getCode());

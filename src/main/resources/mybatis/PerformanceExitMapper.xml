@@ -19,43 +19,6 @@
   </insert>
 
 
-  <select id="getMonthPerformanceExit" resultMap="BaseResultMap"  >
-    select marketing_name,sum(saleroom) as saleroom
-    from sys_performance_exit
-    where
-    month=#{month}
-    AND
-    year=#{year}
-    AND
-    marketing_name=#{marketingName}
-
-  </select>
-
-
-    <select id="getDayPerformanceExit" resultMap="BaseResultMap"  >
-        select marketing_name,sum(saleroom) as saleroom
-        from sys_performance_exit
-        where
-        saleroom_date=#{saleroomDate}
-        AND
-        marketing_name=#{marketingName}
-
-    </select>
-
-
-    <select id="getPerformanceExit" resultMap="BaseResultMap"  >
-     SELECT a.marketing_name,MAX(saleroom)AS saleroom,a.saleroom_date,a.month,a.year FROM(
-    select marketing_name,sum(saleroom) as saleroom,saleroom_date,month,year
-      from sys_performance_exit
-      where
-      saleroom_date=#{saleroomDate}
-      GROUP BY marketing_name
-      order by saleroom desc
-      )a
-     WHERE
-     1=1
-    </select>
-
 
     <select id="getLatMonthPerformanceExit" resultMap="BaseResultMap"  >
       select sum(saleroom) as saleroom

@@ -180,14 +180,14 @@ public class PerformanceServiceImpl implements PerformanceService {
                 Date currentTime_2;
                     currentTime_2 = formatter.parse(dateString);
                 List<Performance> performances;
-                performances = performanceMapper.getPerformance(currentTime_2);
+                performances = performanceMapper.getPerformanceList(currentTime_2);
                 if (performances.size()==0){//如果星期天则在往前找一天；放长假就再往前找
                     for (int i=0;i<=SYS_LENGTH;i++) {
                         calendar.setTime(currentTime_2);
                         calendar.add(Calendar.DAY_OF_MONTH, -1);
                         Date currentTime_3;
                         currentTime_3 = formatter.parse(formatter.format(calendar.getTime()));//获得时间
-                        performances = performanceMapper.getPerformance(currentTime_3);
+                        performances = performanceMapper.getPerformanceList(currentTime_3);
                         if(performances!=null)break;
                     }
                 }

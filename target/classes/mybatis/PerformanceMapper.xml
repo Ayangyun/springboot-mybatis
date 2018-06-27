@@ -31,12 +31,37 @@
   </insert>
 
 
-  <select id="getPerformance" resultMap="BaseResultMap"  >
+  <select id="getPerformanceList" resultMap="BaseResultMap"  >
     select * from sys_performance
     WHERE
     1=1
     AND saleroom_date=#{saleroomDate}
 
+  </select>
+
+
+  <select id="getMonthPerformanceList" resultMap="BaseResultMap"  >
+    select marketing_name,sum(saleroom) as saleroom
+    from sys_performance
+    where
+    month=#{month}
+    AND
+    year=#{year}
+    GROUP BY marketing_name
+    order by saleroom desc
+  </select>
+
+  <select id="getPerformance" resultMap="BaseResultMap"  >
+    SELECT a.marketing_name,MAX(saleroom)AS saleroom,a.saleroom_date,a.month,a.year FROM(
+    select marketing_name,sum(saleroom) as saleroom,saleroom_date,month,year
+    from sys_performance
+    where
+    saleroom_date=#{saleroomDate}
+    GROUP BY marketing_name
+    order by saleroom desc
+    )a
+    WHERE
+    1=1
   </select>
 
 
@@ -47,11 +72,20 @@
     month=#{month}
     AND
     year=#{year}
-    GROUP BY marketing_name
-    order by saleroom desc
+    AND
+    marketing_name=#{marketingName}
 
   </select>
 
 
+  <select id="getDayPerformance" resultMap="BaseResultMap"  >
+    select marketing_name,sum(saleroom) as saleroom
+    from sys_performance
+    where
+    saleroom_date=#{saleroomDate}
+    AND
+    marketing_name=#{marketingName}
+
+  </select>
 
 </mapper>

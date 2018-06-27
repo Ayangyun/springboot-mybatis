@@ -109,7 +109,7 @@ public class UserServiceImpl implements UserService {
     public User loginUserInfo(String userName, String passWord)throws WeChatAPIBizException  {
 
         try {
-            if (userName.equals("") && passWord.equals("")){
+            if (userName.equals("")  && passWord.equals("")){
                 throw new WeChatAPIBizException(APIResponseCodeEnum.REQUIRED_PARAM_EMPTY.getCode());
             }else {
                 return userMapper.loginUserInfo(userName,passWord);

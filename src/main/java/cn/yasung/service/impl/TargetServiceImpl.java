@@ -65,11 +65,7 @@ public class TargetServiceImpl implements TargetService {
     public List<Target> getListTarget()throws WeChatAPIBizException {
 
         try {
-
-            List<Target>   targetList  = targetMapper.getListTarget();
-
-
-            return targetList;
+            return targetMapper.getListTarget();
         }catch (WeChatAPIBizException e){
             throw  e;
         }catch (Exception e){
