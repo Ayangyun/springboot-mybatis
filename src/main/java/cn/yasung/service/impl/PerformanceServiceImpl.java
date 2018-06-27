@@ -86,7 +86,6 @@ public class PerformanceServiceImpl implements PerformanceService {
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
             List<Performance> performanceList1 = new ArrayList<>();
             if (performanceList.size() != 0){
-
                 Date newDate = new Date();//当前时间
                 for (Performance performance : performanceList) {
                     PerformanceExit performanceExit=new PerformanceExit();
