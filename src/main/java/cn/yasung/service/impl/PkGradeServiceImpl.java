@@ -73,7 +73,7 @@ public class PkGradeServiceImpl implements PkGradeService {
             List<Integral> integralList = integralMapper.getListIntegers();
             Performance performance;
             performance = performanceMapper.getPerformance(date);//获得当日销售额最高的那个人
-            if (performance==null){//没有在往前找一天
+            if (performance==null){//没有数据往前找，直至找到数据。
                 for (int i=0;i<=SYS_LENGTH;i++){
                     calendar.setTime(date);
                     calendar.add(Calendar.DAY_OF_MONTH, -1);
@@ -141,11 +141,11 @@ public class PkGradeServiceImpl implements PkGradeService {
             calendar.setTime(new Date());
             int month = calendar.get(Calendar.MONTH);//0代表第一个月
             String year = String.valueOf(calendar.get(Calendar.YEAR));//那一年
-            Target target = targetMapper.getMonthTarget(String.valueOf(month + 1), year);
-            Target target1 = targetMapper.getYearTarget(year);
+            Target target = targetMapper.getMonthTarget(String.valueOf(month + 1), year);//月目标
+            Target target1 = targetMapper.getYearTarget(year);//年目标
             PerformanceExit performanceExit = performanceExitMapper.getLatMonthPerformanceExit(String.valueOf(month + 1), year);//月销售额度
-            PerformanceExit performanceExit1 = performanceExitMapper.getLatYearPerformanceExit(year);//年销
-             // 售额度
+            PerformanceExit performanceExit1 = performanceExitMapper.getLatYearPerformanceExit(year);//年销售额度
+
             int maxDay = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);//当月有几天
             int lastYear = calendar.get(Calendar.DAY_OF_YEAR);//今天相对今年过去了几天
             int lastMonth = calendar.get(Calendar.DAY_OF_MONTH);//今天相对这个月过去了几天
