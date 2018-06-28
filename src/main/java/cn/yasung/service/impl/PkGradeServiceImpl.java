@@ -89,13 +89,23 @@ public class PkGradeServiceImpl implements PkGradeService {
                 }
                 requestPojo.setMarketingName(integralList.get(i).getMarketingName());
                 requestPojo.setHeadUrl(marketingMapper.getMarketing(integralList.get(i).getMarketingName()).getHeadUrl());
-                requestPojo.setAtSaleroom(performanceMapper.getDayPerformance(date, integralList.get(i).getMarketingName()).getSaleroom());//当天业绩
-                requestPojo.setAtMonthSaleroom(performanceMapper.getMonthPerformance(String.valueOf(month + 1), year, integralList.get(i).getMarketingName()).getSaleroom());//当月成绩
-                Performance performance1 = performanceMapper.getMonthPerformance(String.valueOf(month), year, integralList.get(i).getMarketingName());//上月成绩
-                if (performance == null) {
+                Performance performance1=performanceMapper.getDayPerformance(date, integralList.get(i).getMarketingName());
+                if (performance1==null){
+                    requestPojo.setAtSaleroom(new BigDecimal(0));//当天业绩
+                }else {
+                    requestPojo.setAtSaleroom(performance1.getSaleroom());//当天业绩
+                }
+                Performance performance2 =performanceMapper.getMonthPerformance(String.valueOf(month + 1), year, integralList.get(i).getMarketingName());
+                if (performance2==null){
+                    requestPojo.setAtMonthSaleroom(new BigDecimal(0));//当月成绩
+                }else {
+                    requestPojo.setAtMonthSaleroom(performance2.getSaleroom());//当月成绩
+                }
+                Performance performance3 = performanceMapper.getMonthPerformance(String.valueOf(month), year, integralList.get(i).getMarketingName());//上月成绩
+                if (performance3 == null) {//上个月没成绩
                     requestPojo.setLastMonthSaleroom(new BigDecimal(0));
                 } else {
-                    requestPojo.setLastMonthSaleroom(performance1.getSaleroom());
+                    requestPojo.setLastMonthSaleroom(performance3.getSaleroom());
                 }
                 requestPojo.setAtMonthIntegral(integralList.get(i).getMonthIntegral());//获得当月积分
                 requestPojo.setYearIntegral(integralList.get(i).getYearIntegral());//获得年积分
@@ -133,8 +143,9 @@ public class PkGradeServiceImpl implements PkGradeService {
             String year = String.valueOf(calendar.get(Calendar.YEAR));//那一年
             Target target = targetMapper.getMonthTarget(String.valueOf(month + 1), year);
             Target target1 = targetMapper.getYearTarget(year);
-            PerformanceExit performanceExit = performanceExitMapper.getLatMonthPerformanceExit(String.valueOf(month + 1), year);
-            PerformanceExit performanceExit1 = performanceExitMapper.getLatYearPerformanceExit(year);
+            PerformanceExit performanceExit = performanceExitMapper.getLatMonthPerformanceExit(String.valueOf(month + 1), year);//月销售额度
+            PerformanceExit performanceExit1 = performanceExitMapper.getLatYearPerformanceExit(year);//年销
+             // 售额度
             int maxDay = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);//当月有几天
             int lastYear = calendar.get(Calendar.DAY_OF_YEAR);//今天相对今年过去了几天
             int lastMonth = calendar.get(Calendar.DAY_OF_MONTH);//今天相对这个月过去了几天
@@ -161,8 +172,10 @@ public class PkGradeServiceImpl implements PkGradeService {
 
     @Override
     public ChampionVo getChampion(String identification)throws WeChatAPIBizException {
+
         try {
-            ChampionVo championVo = new ChampionVo();
+
+           ChampionVo championVo = new ChampionVo();
            Champion champion= championMapper.getChampion(identification);
            String championUrl=champion.getUrl().substring(champion.getUrl().lastIndexOf(".")+1,champion.getUrl().length());
            if (championUrl.equals("jpg") || championUrl.equals("png")){

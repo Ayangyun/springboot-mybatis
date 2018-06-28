@@ -63,7 +63,13 @@ public class QuartzService {
             integralExit.setMonthIntegral(integralList1.get(i).getMonthIntegral());
             integralExit.setYearIntegral(integralList1.get(i).getYearIntegral());
             integralExit.setMonth(String.valueOf(month+1));
-            integralExit.setRanking(String.valueOf(i+1));
+            if (i==0){
+                integralExit.setRanking("冠军");
+            }else if (i==performanceList.size()-1){
+                integralExit.setRanking("老末");
+            }else {
+                integralExit.setRanking("第"+String.valueOf(i + 1)+"名");
+            }
             integralExit.setYear(year);
             integralExitMapper.addIntegralExit(integralExit);
             integralList1.get(i).setMonthIntegral(0);//把月积分清零
