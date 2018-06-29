@@ -8,8 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a5af93fd-38fe-4cd0-a128-73a4f0af5744" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yasung/constants/APIResponseCodeEnum.java" afterPath="$PROJECT_DIR$/src/main/java/cn/yasung/constants/APIResponseCodeEnum.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/yasung/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/yasung/controller/LoginController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/yasung/constants/APIResponseCodeEnum.class" afterPath="$PROJECT_DIR$/target/classes/cn/yasung/constants/APIResponseCodeEnum.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/yasung/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/cn/yasung/controller/LoginController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/yasung/service/impl/PkGradeServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/yasung/service/impl/PkGradeServiceImpl.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,17 +32,27 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/service/impl/PkGradeServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="397">
-              <caret line="153" column="25" lean-forward="true" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="25" />
+              <caret line="153" column="25" lean-forward="false" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="48" column="6" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+            <state relative-caret-position="383">
+              <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="47" lean-forward="false" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -96,27 +108,8 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/service/impl/QuartzService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
-              <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+              <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntegralMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/IntegralMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1215">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-              <folding>
-                <marker date="1529457928972" expanded="true" signature="1138:1548" ph="insert into sys_integral... " />
-                <marker date="1529457928972" expanded="true" signature="1634:1796" ph="select id,ma... sys_integral" />
-                <marker date="1529457928972" expanded="true" signature="1885:2057" ph="select id,ma... sys_integral" />
-                <marker date="1529457928972" expanded="true" signature="2146:2316" ph="select id,ma... sys_integral" />
-                <marker date="1529457928972" expanded="true" signature="2395:2540" ph="select id,ma... sys_integral" />
-                <marker date="1529457928972" expanded="true" signature="2645:2733" ph="select * fro... sys_integral" />
-                <marker date="1529457928972" expanded="true" signature="2819:4143" ph="update sys_integral... " />
-                <marker date="1529457928972" expanded="true" signature="4223:4286" ph="delete from sys_integral... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -125,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/controller/PerformanceController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="468">
-              <caret line="42" column="93" lean-forward="true" selection-start-line="42" selection-start-column="93" selection-end-line="42" selection-end-column="93" />
+              <caret line="42" column="93" lean-forward="false" selection-start-line="42" selection-start-column="93" selection-end-line="42" selection-end-column="93" />
               <folding />
             </state>
           </provider>
@@ -180,7 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cn/yasung/controller/TargetController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/service/impl/IntegralServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/model/Integral.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/IntegralMapper.xml" />
@@ -191,7 +183,6 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/service/ChampionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/utils/uploadQNImg.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/model/Champion.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/config/SwaggerConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/controller/MarketingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/service/impl/ChampionServiceImpl.java" />
@@ -231,6 +222,8 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/service/impl/PkGradeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/constants/APIResponseCodeEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/yasung/controller/LoginController.java" />
+        <option value="$USER_HOME$/Documents/profile" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -656,7 +649,7 @@
       <workItem from="1529974840045" duration="20055000" />
       <workItem from="1530058602155" duration="19839000" />
       <workItem from="1530085696114" duration="8338000" />
-      <workItem from="1530145567708" duration="28753000" />
+      <workItem from="1530145567708" duration="32513000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1529646840028</created>
@@ -763,11 +756,18 @@
       <option name="project" value="LOCAL" />
       <updated>1530180427675</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="提交代码">
+      <created>1530252836149</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1530252836149</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="306868000" />
+    <option name="totallyTimeSpent" value="310628000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -782,7 +782,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39934713" sideWeight="0.49573562" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39934713" sideWeight="0.49573562" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32752994" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -865,19 +865,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/ChampionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding>
-            <marker date="1529747236737" expanded="true" signature="569:595" ph="select * fro... sys_champion" />
-            <marker date="1529747236737" expanded="true" signature="569:658" ph="select * fro... sys_champion" />
-            <marker date="1529747236737" expanded="true" signature="748:1027" ph="update sys_marketing... " />
-            <marker date="1529747236737" expanded="true" signature="1109:1208" ph="insert into sys_champion... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.4.RELEASE/spring-web-4.3.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
@@ -1021,13 +1008,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1220,7 +1200,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/service/impl/QuartzService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
-          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1228,7 +1208,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/controller/PerformanceController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
-          <caret line="42" column="93" lean-forward="true" selection-start-line="42" selection-start-column="93" selection-end-line="42" selection-end-column="93" />
+          <caret line="42" column="93" lean-forward="false" selection-start-line="42" selection-start-column="93" selection-end-line="42" selection-end-column="93" />
           <folding />
         </state>
       </provider>
@@ -1255,7 +1235,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/service/impl/PkGradeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
-          <caret line="153" column="25" lean-forward="true" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="25" />
+          <caret line="153" column="25" lean-forward="false" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1279,10 +1259,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Documents/profile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="48" column="6" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+        <state relative-caret-position="383">
+          <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="47" lean-forward="false" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
           <folding />
         </state>
       </provider>
