@@ -12,6 +12,7 @@ package cn.yasung.constants;
 public enum APIResponseCodeEnum {
 
     SUCCESS(10000, "success"),
+    ERROR(20000, "success"),
     FAIL(-1,"fail"),
 
     SYSTEM_ERROR(99999, "系统错误"),

@@ -40,10 +40,10 @@ public class LoginController {
             logger.info(user);
         if(user!=null){
             logger.info("登录成功");
-            return new APIResponse<>(APIResponseCodeEnum.SYSTEM_LOGIN_TS.getMsg());
+            return new APIResponse<>(APIResponseCodeEnum.SUCCESS.getCode(),APIResponseCodeEnum.SYSTEM_LOGIN_TS.getMsg(),user);
         }else{
-        logger.error(APIResponseCodeEnum.SYSTEM_LOGIN.getCode());
-        return new  APIResponse<>(APIResponseCodeEnum.SYSTEM_LOGIN.getMsg() );
+        logger.error(APIResponseCodeEnum.ERROR.getCode());
+        return new  APIResponse<>(APIResponseCodeEnum.ERROR.getCode(),APIResponseCodeEnum.SYSTEM_LOGIN.getMsg(),user );
             }
 
     }
