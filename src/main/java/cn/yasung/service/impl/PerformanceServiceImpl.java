@@ -17,6 +17,7 @@ import cn.yasung.vo.IntegralVo;
 import cn.yasung.vo.PerformanceVo;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.google.common.collect.Lists;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -162,7 +163,7 @@ public class PerformanceServiceImpl implements PerformanceService {
                     integral.setDayChampionDate(new Date());
                     integralMapper.updateIntegral(integral);
                 }
-                List<Performance> performanceList2 = new ArrayList<>();
+                List<Performance> performanceList2 = Lists.newArrayList();
                 for (Performance performance2 : performanceList1) {
                     if (performance2.getSaleroom().compareTo(minSaleroom) == 0) {//查询是否有多个最低成绩的赋予标示
                         performance2.setReciprocal("0");
