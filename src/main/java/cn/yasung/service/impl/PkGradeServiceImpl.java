@@ -82,6 +82,8 @@ public class PkGradeServiceImpl implements PkGradeService {
                     if (performance!=null) break;
                 }
             }
+
+
             for (int i = 0; i < integralList.size(); i++) {
                 RequestPojo requestPojo = new RequestPojo();
                 if (performance.getMarketingName().equals(integralList.get(i).getMarketingName())) {//给销售额最高的一个标识
