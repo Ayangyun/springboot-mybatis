@@ -56,7 +56,6 @@ public class PkGradeServiceImpl implements PkGradeService {
     private ChampionMapper championMapper;
 
     private Logger logger = Logger.getLogger(PkGradeServiceImpl.class);
-//test
     @Override
     public List<RequestPojo> getListGrade() throws WeChatAPIBizException {
         try {
