@@ -6,13 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5af93fd-38fe-4cd0-a128-73a4f0af5744" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_qiniu_qiniu_java_sdk_7_2_14.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="a5af93fd-38fe-4cd0-a128-73a4f0af5744" name="Default" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/springboot-mybatis.iml" afterPath="$PROJECT_DIR$/springboot-mybatis.iml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/yasung/controller/MarketingController.java" afterPath="$PROJECT_DIR$/src/main/java/cn/yasung/controller/MarketingController.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/yasung/service/impl/PkGradeServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/cn/yasung/service/impl/PkGradeServiceImpl.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,6 +22,11 @@
     <SUITE FILE_PATH="coverage/springboot_mybatis$Application.coverage" NAME="Application Coverage Results" MODIFIED="1530424196082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>cn.yasung.*</FILTER>
     </SUITE>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Unnamed">
+      <favorite_root url="file://$PROJECT_DIR$/src/main/java/cn/yasung/controller/MarketingController.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -42,8 +43,8 @@
       <file leaf-file-name="MarketingController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/controller/MarketingController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="56" column="14" lean-forward="false" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
+            <state relative-caret-position="170">
+              <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -526,7 +527,7 @@
       <workItem from="1531440108773" duration="1253000" />
       <workItem from="1531475404619" duration="1351000" />
       <workItem from="1531526273799" duration="52000" />
-      <workItem from="1531526894228" duration="315000" />
+      <workItem from="1531526894228" duration="492000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1529646840028</created>
@@ -682,15 +683,21 @@
       <option name="project" value="LOCAL" />
       <updated>1531475535805</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="test">
+      <created>1531527219271</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1531527219271</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="350611000" />
+    <option name="totallyTimeSpent" value="350788000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42872688" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
@@ -712,7 +719,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27529925" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2531983" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2531983" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -771,7 +778,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
     <MESSAGE value="提交代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交代码" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1124,8 +1132,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/yasung/controller/MarketingController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="56" column="14" lean-forward="false" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
+        <state relative-caret-position="170">
+          <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
