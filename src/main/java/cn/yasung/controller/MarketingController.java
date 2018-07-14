@@ -54,6 +54,7 @@ public class MarketingController {
             return new APIResponse<>("文件不能为空");
         }
         // 获取文件名
+        //
         String fileName = file.getOriginalFilename();
         logger.info("上传的文件名为：" + fileName);
         // 获取文件的后缀名
