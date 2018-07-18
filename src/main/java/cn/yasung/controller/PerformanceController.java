@@ -9,6 +9,7 @@ import cn.yasung.service.PerformanceService;
 import cn.yasung.vo.IntegralVo;
 import cn.yasung.vo.PerformanceVo;
 import com.github.pagehelper.PageInfo;
+
 import com.wordnik.swagger.annotations.Api;
 import com.wordnik.swagger.annotations.ApiOperation;
 import org.apache.log4j.Logger;
@@ -22,10 +23,11 @@ import java.util.List;
 
 
 /**
- * Created by yang on 2018/5/31.
+ * Created by Ayang on 2018/7/18.
  */
-@RestController
-@Api(value = "销售额相关" ,description = "描述信息")
+
+@RestController("FrontendCommodityController")
+@Api(value = "/performance" ,description = "销售额相关")
 @RequestMapping(value = "/performance")
 public class PerformanceController {
 

@@ -169,7 +169,7 @@ public class PkGradeServiceImpl implements PkGradeService {
         }
 
     }
-//test
+
     @Override
     public ChampionVo getChampion(String identification)throws WeChatAPIBizException {
 
